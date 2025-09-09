@@ -6,12 +6,6 @@ const cookieParser = require("cookie-parser");
 
 
 // Rotas
-const generateAuth = require("./routes/generate-auth");
-const links = require("./routes/links");
-const login = require("./routes/login");
-const registerPublic = require("./routes/register-public");
-const usuariosRoutes = require("./routes/usuarios");
-const publishPresellRouter = require("./routes/publishPresell");
 const sendEmailRoute = require("./routes/enviarEmail");
 
 const deployRoute = require("./routes/deploy");
@@ -34,16 +28,10 @@ app.use(cookieParser());
 app.use(express.json());
 
 // ------------------ Rotas ------------------
-app.use("/generate-auth", generateAuth);
-app.use("/links", links);
-app.use("/login", login);
-app.use("/register-public", registerPublic);
-app.use("/registerPublic", registerPublic);
-app.use("/usuarios", usuariosRoutes);
-app.use("/publicar-presell", publishPresellRouter);
+
 app.use("/send-email", sendEmailRoute);
 
-app.use("/vercel", deployRoute);
+
 
 
 
