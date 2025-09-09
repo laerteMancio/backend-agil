@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser");
 // Rotas
 const sendEmailRoute = require("./routes/enviarEmail");
 
-const deployRoute = require("./routes/deploy");
+
 
 dotenv.config();
 
