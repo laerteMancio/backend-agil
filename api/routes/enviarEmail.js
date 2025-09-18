@@ -60,17 +60,17 @@ www.agiltec.com.br`,
       info = await transporter.sendMail({
         from: '"Relatórios - Agiltec" <relatorio@agiltec.com.br>',
         to,
-        subject: subject || "Relatório Gerado",
-        text:
-          text ||
-          `Segue em anexo o relatório solicitado.
+        subject: subject || "Relatório",
+        text: `Segue em anexo o relatório solicitado.
 
 Por favor, não responda a esta mensagem.
-Este é um e-mail automático do sistema Agiltec.`,
+Este é um e-mail automático do sistema Agiltec.
+
+Copyright © Agil Informática. Todos os direitos reservados. Termos do Serviço.
+Contato: comercial@agiltec.com.br | +55 11 94588-4774
+www.agiltec.com.br`,
         attachments,
       });
-    } else {
-      return res.status(400).json({ error: "Tipo de email inválido. Use 'NFE' ou 'RELATORIO'." });
     }
 
     console.log("Email enviado:", info.messageId);
