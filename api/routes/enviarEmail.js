@@ -58,7 +58,7 @@ www.agiltec.com.br`,
     } else if (tipo === "RELATORIO") {
       // Configuração para Relatório
       info = await transporter.sendMail({
-        from: '"Relatórios - Agiltec" <relatorio@agiltec.com.br>',
+        from: '"Relatorios - Agiltec" <relatorio@agiltec.com.br>',
         to,
         subject: subject || "Relatório",
         text: `Segue em anexo o relatório solicitado.
